@@ -19,7 +19,7 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
   const params = await searchParams;
   const error = params.error ? loginErrors[params.error] : undefined;
 
-  if (isSupabaseConfigured() && await getCurrentAdmin()) redirect("/admin");
+  if (isSupabaseConfigured() && await getCurrentAdmin()) redirect("/admin/content");
 
   return (
     <main className="admin-shell admin-login-shell">

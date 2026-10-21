@@ -26,5 +26,5 @@ export async function signInAdmin(formData: FormData) {
     redirect("/admin/login?error=not-authorized");
   }
 
-  redirect("/admin");
+  redirect("/admin/content");
 }

@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/admin";
 import { AdminCatalogManager } from "@/components/AdminCatalogManager";
 
@@ -7,6 +8,8 @@ type AdminCatalogPageProps = {
 
 export default async function AdminCatalogPage({ searchParams }: AdminCatalogPageProps) {
   const params = await searchParams;
+  if (params.embedded !== "1") redirect("/admin/content?section=products");
+
   const { supabase } = await requireAdmin();
   const [{ data: categories, error: categoriesError }, { data: brands, error: brandsError }] = await Promise.all([
     supabase.from("categories").select("id,label,icon_url,icon_path").order("sort_order"),

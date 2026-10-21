@@ -29,7 +29,6 @@ export default async function AdminTeamPage({ searchParams }: TeamPageProps) {
         </div>
         <nav className="admin-nav" aria-label="เมนูผู้ดูแล">
           <Link href="/admin/content">จัดการเว็บไซต์</Link>
-          <Link href="/admin">แบรนด์</Link>
           <Link className="admin-nav-active" href="/admin/team">ผู้ใช้งาน</Link>
           <Link href="/" target="_blank">ดูหน้าเว็บ ↗</Link>
         </nav>

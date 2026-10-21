@@ -26,7 +26,6 @@ export default async function AdminContentPage({ searchParams }: AdminContentPag
         </div>
         <nav className="admin-nav" aria-label="เมนูผู้ดูแล">
           <Link href="/admin/content" className="admin-nav-active">จัดการเว็บไซต์</Link>
-          <Link href="/admin/content?section=products">สินค้าและแบรนด์</Link>
           <Link href="/admin/team">ผู้ใช้งาน</Link>
           <Link href="/" target="_blank">ดูหน้าเว็บ ↗</Link>
         </nav>
